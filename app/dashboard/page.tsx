@@ -252,7 +252,7 @@ export default function LeadManagement() {
 
             <button
               onClick={handleAddLead}
-              className="w-full py-3 bg-linear-to-r from-blue-600 to-purple-600 text-white rounded-xl font-semibold shadow-md"
+              className="w-full py-3 bg-linear-to-r from-blue-600 to-purple-600 text-white rounded-xl font-semibold shadow-md cursor-pointer"
             >
               Add Lead
             </button>
