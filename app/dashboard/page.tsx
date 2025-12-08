@@ -78,6 +78,13 @@ export default function LeadManagement() {
     fetchLeads(token);
   }, [router]);
 
+
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    router.push("/login");
+  };
+
+
   // ----------------------------
   // Fetch Leads from backend
   // ----------------------------
@@ -183,12 +190,32 @@ export default function LeadManagement() {
     <div className="min-h-screen bg-linear-to-br from-slate-50 via-blue-50 to-slate-100 p-6">
 
       {/* Header */}
-      <header className="bg-white border-b border-slate-200 shadow-sm mb-8 p-6 rounded-xl">
+      {/* <header className="bg-white border-b border-slate-200 shadow-sm mb-8 p-6 rounded-xl">
         <h1 className="text-3xl font-bold bg-linear-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
           Lead Management
         </h1>
         <p className="text-slate-600 mt-1">Track and manage your sales pipeline</p>
+      </header> */}
+
+      <header className="bg-white border-b border-slate-200 shadow-sm mb-8 p-6 rounded-xl flex items-center justify-between">
+        <div>
+          <h1 className="text-3xl font-bold bg-linear-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+            Lead Management
+          </h1>
+          <p className="text-slate-600 mt-1">Track and manage your sales pipeline</p>
+        </div>
+
+        {/* Logout Button */}
+        <button
+          onClick={handleLogout}
+          className="cursor-pointer px-5 py-2.5 rounded-xl bg-gradient-to-r from-slate-700 to-slate-900 
+               text-white font-semibold shadow-lg hover:shadow-xl hover:opacity-90 
+               transition-all duration-200"
+        >
+          Logout
+        </button>
       </header>
+
 
       {message && (
         <div className="mb-4 p-3 bg-amber-100 text-amber-700 rounded-xl border border-amber-200">
@@ -209,7 +236,7 @@ export default function LeadManagement() {
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-        
+
         {/* Add Lead Form */}
         <div className="bg-white rounded-2xl shadow-lg border border-slate-200 p-6 h-fit">
           <h2 className="text-xl font-bold text-slate-800 mb-4">Add New Lead</h2>

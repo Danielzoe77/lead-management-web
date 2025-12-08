@@ -266,7 +266,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
 
         {/* Gradient Button */}
         <button
-          className="w-full py-3 rounded-xl text-white font-medium bg-linear-to-r from-blue-600 to-purple-600 shadow-md hover:opacity-95 transition"
+          className="w-full cursor-pointer py-3 rounded-xl text-white font-medium bg-linear-to-r from-blue-600 to-purple-600 shadow-md hover:opacity-95 transition"
         >
           Login
         </button>
