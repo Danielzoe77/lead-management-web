@@ -235,7 +235,7 @@ export default function LeadManagement() {
   {/* Logout Button */}
   <button
     onClick={handleLogout}
-    className="cursor-pointer px-5 py-2.5 rounded-xl bg-gradient-to-r from-slate-700 to-slate-900 
+    className="cursor-pointer px-5 py-2.5 rounded-xl bg-linear-to-r from-slate-700 to-slate-900 
       text-white font-semibold shadow-lg hover:shadow-xl hover:opacity-90 
       transition-all duration-200"
   >
