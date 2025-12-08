@@ -5,6 +5,8 @@
 
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
+
 
 // ----------------------
 // Types
@@ -190,14 +192,8 @@ export default function LeadManagement() {
     <div className="min-h-screen bg-linear-to-br from-slate-50 via-blue-50 to-slate-100 p-6">
 
       {/* Header */}
-      {/* <header className="bg-white border-b border-slate-200 shadow-sm mb-8 p-6 rounded-xl">
-        <h1 className="text-3xl font-bold bg-linear-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-          Lead Management
-        </h1>
-        <p className="text-slate-600 mt-1">Track and manage your sales pipeline</p>
-      </header> */}
-
-      <header className="bg-white border-b border-slate-200 shadow-sm mb-8 p-6 rounded-xl flex items-center justify-between">
+      
+      {/* <header className="bg-white border-b border-slate-200 shadow-sm mb-8 p-6 rounded-xl flex items-center justify-between">
         <div>
           <h1 className="text-3xl font-bold bg-linear-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
             Lead Management
@@ -205,7 +201,7 @@ export default function LeadManagement() {
           <p className="text-slate-600 mt-1">Track and manage your sales pipeline</p>
         </div>
 
-        {/* Logout Button */}
+       
         <button
           onClick={handleLogout}
           className="cursor-pointer px-5 py-2.5 rounded-xl bg-gradient-to-r from-slate-700 to-slate-900 
@@ -214,7 +210,40 @@ export default function LeadManagement() {
         >
           Logout
         </button>
-      </header>
+      </header> */}
+
+      <header className="bg-white border-b border-slate-200 shadow-sm mb-8 p-6 rounded-xl flex items-center justify-between">
+
+  {/* Logo + Title */}
+  <div className="flex items-center gap-4">
+    <Image
+      src="/logo.png"           // path from /public
+      alt="Logo"
+      width={60}
+      height={60}
+      className="rounded-md"
+    />
+
+    <div>
+      <h1 className="text-3xl font-bold bg-linear-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+        Lead Management
+      </h1>
+      <p className="text-slate-600 mt-1">Track and manage your sales pipeline</p>
+    </div>
+  </div>
+
+  {/* Logout Button */}
+  <button
+    onClick={handleLogout}
+    className="cursor-pointer px-5 py-2.5 rounded-xl bg-gradient-to-r from-slate-700 to-slate-900 
+      text-white font-semibold shadow-lg hover:shadow-xl hover:opacity-90 
+      transition-all duration-200"
+  >
+    Logout
+  </button>
+
+</header>
+
 
 
       {message && (

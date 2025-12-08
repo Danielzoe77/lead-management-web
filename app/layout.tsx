@@ -37,10 +37,16 @@
 import "./globals.css";
 import type { Metadata } from "next";
 
-export const metadata: Metadata = {
+export const metadata = {
   title: "Lead Management",
   description: "Simple lead management application",
+  icons: {
+    icon: "/9391703.ico",
+    shortcut: "/9391703.ico",
+    apple: "/apple-icon.png",
+  },
 };
+
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
